@@ -43,3 +43,13 @@ requests
     }
   ]
 }
+{
+  "version": 2,
+  "builds": ,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app.py"
+    }
+  ]
+}
