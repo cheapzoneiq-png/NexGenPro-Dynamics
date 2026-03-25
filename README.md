@@ -52,4 +52,11 @@ requests
       "dest": "app.py"
     }
   ]
-}
+}flask
+stripe
+requests
+gunicorn
+if __name__ == '__main__':
+app.run()
+application = app # Vercel hook
+
