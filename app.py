@@ -51,4 +51,9 @@ def scan():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
+        result = geo_data['results'][0]
+lat = result['location']['lat']
+lng = result['lng']
+from flask import Flask, request, jsonify
+import requests
+# GEOCODIO_KEY = "your_key_here"   # ← Add your API key
