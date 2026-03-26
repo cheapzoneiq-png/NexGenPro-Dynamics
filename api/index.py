@@ -67,6 +67,9 @@ def scan():
             "lng": lng,
             "address": address
         })
+        import os
+GEOCODIO_KEY = os.environ.get('GEOCODIO_KEY')
+print("Key loaded:", GEOCODIO_KEY[:5] + "...")  # for logs
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
