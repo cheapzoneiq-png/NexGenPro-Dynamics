@@ -73,4 +73,6 @@ requests
 @app.route('/')
 def home():
 return jsonify({"status": "NexGen Pro Dynamics API is running!"})
+fema_url = f"https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query?geometry={lng},{lat}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=FLOOD_ZONE,SFHA_TF&f=json"
+risk = "high" if zone in or sfha else "low"
 
