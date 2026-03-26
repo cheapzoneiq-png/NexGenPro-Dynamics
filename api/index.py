@@ -1,3 +1,7 @@
+import os
+GEOCODIO_KEY = os.environ.get('GEOCODIO_KEY')
+if not GEOCODIO_KEY:
+    raise ValueError("GEOCODIO_KEY not set!")
 from flask import Flask, request, jsonify
 import requests
 
