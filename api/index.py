@@ -34,7 +34,9 @@ def scan():
 
         if not geo_data.get('results'):
             return jsonify({"error": "No location found"}), 404
-
+import os
+GEOCODIO_KEY = os.environ.get('GEOCODIO_KEY')if not GEOCODIO_KEY:
+    return jsonify({"error": "API key missing"}), 500
         # Extract lat/lng
         result = geo_data['results'][0]
         lat = result['location']['lat']
