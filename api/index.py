@@ -44,7 +44,7 @@ def scan():
         fema_data = fema_resp.json()
 
         features = fema_data.get('features', [])
-        
+        print("App starting...")  # for logs
         if features:
             attrs = features[0].get('attributes', {})
             zone = attrs.get('FLOOD_ZONE', 'Unknown')
