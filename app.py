@@ -70,3 +70,7 @@ application = app  # Vercel hook
 flask
 requests
 
+@app.route('/')
+def home():
+return jsonify({"status": "NexGen Pro Dynamics API is running!"})
+
